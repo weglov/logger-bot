@@ -17,7 +17,7 @@ bot.on('message', (msg) => {
   const name = msg.from.first_name;
 
   if (msg.sticker) {
-    bot.sendMessage(msg.chat.id, '`' + JSON.stringify(msg.sticker) + '`')
+    bot.sendMessage(msg.chat.id, `${msg.sticker.emoji}: ${msg.sticker.file_id}`)
   }
 });
 
